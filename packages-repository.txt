@@ -42,3 +42,4 @@ firefox
 gvfs
 ntfs-3g
 nano
+neofetch
