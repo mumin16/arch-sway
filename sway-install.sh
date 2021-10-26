@@ -18,6 +18,9 @@ chmod -R +x ~/.config/sway/scripts
 chmod -R +x ~/.config/waybar/scripts
 sudo pacman -Syu --needed --noconfirm - < packages-repository.txt
 dbus-launch dconf load / < xed.dconf
+cd ..
+sudo rm -rf arch-sway
+echo "reboot please"
 #sudo cp lightdm.conf /etc/lightdm/
 #systemctl enable lightdm
 #systemctl start lightdm
