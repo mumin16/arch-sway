@@ -18,3 +18,6 @@ chmod -R +x ~/.config/sway/scripts
 chmod -R +x ~/.config/waybar/scripts
 sudo pacman -Syu --needed --noconfirm - < packages-repository.txt
 dbus-launch dconf load / < xed.dconf
+#sudo cp lightdm-gtk-greeter.conf /etc/lightdm/
+#systemctl enable lightdm
+#systemctl start lightdm
