@@ -3,8 +3,8 @@
 # Easy setup for testing
 sudo pacman -Sg base-devel
 git clone https://aur.archlinux.org/yay-bin.git
-cd ~/yay-bin
-makepkg -si
+cd yay-bin
+makepkg -si --noconfirm
 cd ..
 sudo rm -rf yay-bin
 yay -S --needed --noconfirm nordic-darker-theme
