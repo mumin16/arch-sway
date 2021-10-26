@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Easy setup for testing
-sudo pacman -Syu --needed --noconfirm base-devel
+sudo pacman -Sg base-devel
 git clone https://aur.archlinux.org/yay-bin.git
 cd ~/yay-bin
 makepkg -si
