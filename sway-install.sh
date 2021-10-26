@@ -11,6 +11,7 @@ sudo rm -rf yay-bin
 yay -S --needed --noconfirm nordic-darker-theme
 yay -S --needed --noconfirm arc-x-icons-theme
 yay -S --needed --noconfirm rar
+cp .bash_profile ~/.bash_profile
 cp -R .config/* ~/.config/
 cp .profile ~/.profile
 cp .gtkrc-2.0 ~/.gtkrc-2.0
