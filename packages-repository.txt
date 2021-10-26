@@ -41,3 +41,4 @@ alsa-utils
 firefox
 gvfs
 ntfs-3g
+nano
