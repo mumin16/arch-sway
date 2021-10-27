@@ -1,7 +1,5 @@
 # arch-sway
-minimal arch linux sway installation
-
-installation:
+minimal arch linux sway installation:
 
 firstly:
 Download archiso from https://archlinux.org/download/ and Install with minimal option
