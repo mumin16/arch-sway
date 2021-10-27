@@ -22,6 +22,7 @@ dbus-launch dconf load / < xed.dconf
 #systemctl enable lightdm
 cd ..
 sudo rm -rf arch-sway
+yay -Sc --noconfirm
 echo "reboot please"
 
 
