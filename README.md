@@ -9,6 +9,10 @@ git clone https://github.com/mumin16/arch-sway.git <br />
 cd arch-sway  <br />
 bash sway-install.sh
 
+Android Studio problems:  <br />
+/etc/profile  <br />
+export _JAVA_AWT_WM_NONREPARENTING=1  <br />
+
 Policykit - The rule<br />
 
 Create the file /etc/polkit-1/rules.d/10-udisks2.rules with the following content<br />
