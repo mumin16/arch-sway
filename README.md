@@ -9,6 +9,11 @@ git clone https://github.com/mumin16/arch-sway.git <br />
 cd arch-sway  <br />
 bash sway-install.sh
 
+Elctron wayland:<br />
+~/.config/electron-flags.conf<br />
+--enable-features=UseOzonePlatform<br />
+--ozone-platform=wayland<br />
+
 Android Studio problems:  <br />
 /etc/profile  <br />
 export _JAVA_AWT_WM_NONREPARENTING=1  <br />
