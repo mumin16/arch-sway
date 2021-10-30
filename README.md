@@ -5,9 +5,8 @@ firstly: <br />
 Download archiso from https://archlinux.org/download/ and Install with minimal option
 
 then: <br />
-git clone https://github.com/mumin16/arch-sway.git <br />
-cd arch-sway  <br />
-bash sway-install.sh
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/install.sh --output install.sh<br />
+bash install.sh
 
 Elctron wayland:<br />
 ~/.config/electron-flags.conf<br />
