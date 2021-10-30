@@ -9,12 +9,12 @@ curl https://raw.githubusercontent.com/mumin16/arch-sway/main/install.sh --outpu
 bash install.sh
 
 Shortkeys:<br />
-WindowsKey+Enter -> Terminal (foot)<br />
-WindowsKey+d -> Application Launcher (dmenu)<br />
-WindowsKey+n -> File Manager (pcmanfm)<br />
-WindowsKey+o -> Web browser (chromium)<br />
+WindowsKey+t -> Terminal<br />
+WindowsKey+p -> Program Launcher<br />
+WindowsKey+d -> Directory file manager<br />
+WindowsKey+c -> Chromium<br />
+WindowsKey+m -> Mixer (sound)<br />
+WindowsKey+n -> Network (wifi)<br />
 
+WindowsKey+q -> Quit window<br />
 WindowsKey+1-2-3-n -> Workspaces<br />
-WindowsKey+shift+q -> Close window<br />
-
-
