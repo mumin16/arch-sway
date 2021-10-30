@@ -34,4 +34,4 @@ sudo systemctl disable iwd
 sudo systemctl enable NetworkManager
 rm -rf install.sh
 yay -Sc --noconfirm
-reboot
+
