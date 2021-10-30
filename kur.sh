@@ -17,7 +17,8 @@ sudo systemctl disable iwd
 sudo systemctl enable NetworkManager
 mkdir ~/.config/sway
 mkdir ~/.config/foot
-cp -rf /etc/sway/* ~/.config/sway/
-cp -rf /usr/share/foot/* ~/.config/foot/
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.png --output ~/.config/sway/sway.png
 yay -Sc --noconfirm
 reboot
