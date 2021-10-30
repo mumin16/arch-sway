@@ -10,7 +10,6 @@ yay -S --needed --noconfirm nordic-darker-theme paper-icon-theme
 yay -S --needed --noconfirm pcmanfm lxappearance gvfs ntfs-3g xarchiver rar zip unzip 
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
 yay -S --needed --noconfirm chromium
-yay -S --needed --noconfirm networkmanager
 mkdir ~/.config/sway
 mkdir ~/.config/foot
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
@@ -20,6 +19,7 @@ curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.bash_profile --ou
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
 sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/10-udisks2.rules --output /etc/polkit-1/rules.d/10-udisks2.rules
 sudo usermod -a -G storage "$USER" 
+yay -S --needed --noconfirm networkmanager
 sudo systemctl disable systemd-networkd
 sudo systemctl disable systemd-resolved
 sudo systemctl disable iwd
