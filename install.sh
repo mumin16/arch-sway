@@ -18,6 +18,7 @@ curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.png --output ~/.config/sway/sway.png
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.bash_profile --output ~/.bash_profile
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/10-udisks2.rules --output /etc/polkit-1/rules.d/10-udisks2.rules
 sudo systemctl disable systemd-networkd
 sudo systemctl disable systemd-resolved
 sudo systemctl disable iwd
