@@ -76,8 +76,8 @@ output * bg ~/.config/sway/sway.png fill
 #
     bindsym $mod+d exec pcmanfm
     bindsym $mod+c exec chromium 
-    bindsym $mod+m exec alsamixer
-    bindsym $mod+n exec nmtui
+    bindsym $mod+m exec $term alsamixer
+    bindsym $mod+n exec $term nmtui
 
     #bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
