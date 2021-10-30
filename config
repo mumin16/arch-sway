@@ -74,8 +74,10 @@ output * bg ~/.config/sway/sway.png fill
 #
 # Basics:
 #
-    bindsym $mod+n exec pcmanfm
-    bindsym $mod+o exec chromium 
+    bindsym $mod+o exec pcmanfm
+    bindsym $mod+c exec chromium 
+    bindsym $mod+m exec alsamixer
+    bindsym $mod+n exec nmtui
 
     #bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -83,13 +85,13 @@ output * bg ~/.config/sway/sway.png fill
 
 
     # Start a terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+t exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+p exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -225,7 +227,7 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+    status_command while date +'%d/%m/%Y %I:%M'; do sleep 1; done
 
     colors {
         statusline #ffffff
