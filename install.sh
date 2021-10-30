@@ -17,6 +17,7 @@ curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output 
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.png --output ~/.config/sway/sway.png
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.bash_profile --output ~/.bash_profile
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
 sudo systemctl disable systemd-networkd
 sudo systemctl disable systemd-resolved
 sudo systemctl disable iwd
