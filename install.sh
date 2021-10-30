@@ -18,6 +18,7 @@ curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/
 echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")" >> ~/.config/sway/config
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.png --output ~/.config/sway/sway.png
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.bash_profile --output ~/.bash_profile
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.profile --output ~/.profile
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
 sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/10-udisks2.rules --output /etc/polkit-1/rules.d/10-udisks2.rules
 sudo usermod -a -G storage "$USER" 
