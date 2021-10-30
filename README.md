@@ -17,4 +17,5 @@ WindowsKey+m -> Mixer (sound)<br />
 WindowsKey+n -> Network (wifi)<br />
 
 WindowsKey+q -> Quit window<br />
-WindowsKey+1-2-3-n -> Workspaces<br />
+WindowsKey+1-2-3-n -> Workspace switch<br />
+WindowsKey+arrowkeys -> Window switch<br />
