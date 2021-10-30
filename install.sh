@@ -24,5 +24,6 @@ sudo systemctl disable systemd-networkd
 sudo systemctl disable systemd-resolved
 sudo systemctl disable iwd
 sudo systemctl enable NetworkManager
+rm -rf install.sh
 yay -Sc --noconfirm
 reboot
