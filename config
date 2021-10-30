@@ -74,7 +74,7 @@ output * bg ~/.config/sway/sway.png fill
 #
 # Basics:
 #
-    bindsym $mod+o exec pcmanfm
+    bindsym $mod+d exec pcmanfm
     bindsym $mod+c exec chromium 
     bindsym $mod+m exec alsamixer
     bindsym $mod+n exec nmtui
