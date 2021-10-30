@@ -13,12 +13,15 @@ yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
 yay -S --needed --noconfirm chromium
 mkdir ~/.config/sway
 mkdir ~/.config/foot
-echo "export MOZ_ENABLE_WAYLAND=1" >> /etc/profile
-echo "export XDG_CURRENT_DESKTOP=sway" >> /etc/profile
-echo "export XDG_SESSION_TYPE=wayland" >> /etc/profile
-echo "export WLR_NO_HARDWARE_CURSORS=1" >> /etc/profile
-echo "export WLR_RENDERER_ALLOW_SOFTWARE=1" >> /etc/profile
-echo "export _JAVA_AWT_WM_NONREPARENTING=1" >> /etc/profile
+cp /etc/profile .
+echo "export MOZ_ENABLE_WAYLAND=1" >> profile
+echo "export XDG_CURRENT_DESKTOP=sway" >> profile
+echo "export XDG_SESSION_TYPE=wayland" >> profile
+echo "export WLR_NO_HARDWARE_CURSORS=1" >> profile
+echo "export WLR_RENDERER_ALLOW_SOFTWARE=1" >> profile
+echo "export _JAVA_AWT_WM_NONREPARENTING=1" >> profile
+sudo cp profile /etc/
+rm -rf profile
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
 echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")" >> ~/.config/sway/config
