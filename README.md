@@ -17,5 +17,11 @@ WindowsKey+m -> Mixer (sound/alsamixer)<br />
 WindowsKey+n -> Network (wifi/nmctl)<br />
 
 WindowsKey+q -> Quit window<br />
-WindowsKey+1-2-3-n -> Workspace switch<br />
-WindowsKey+arrowkeys -> Window switch<br />
+WindowsKey+arrowkeys -> switch window<br />
+WindowsKey+leftmouseclicked -> replace window in layout<br />
+
+WindowsKey+1-2-3-n -> switch workspace<br />
+WindowsKey+shift+1-2-3-n -> send window to other workspace<br />
+
+WindowsKey+shift+c -> reload sway<br />
+WindowsKey+shift+e -> exit sway<br />
