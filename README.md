@@ -17,6 +17,7 @@ WindowsKey+m -> Mixer (sound/alsamixer)<br />
 WindowsKey+n -> Network (wifi/nmctl)<br />
 
 WindowsKey+q -> Quit window<br />
+WindowsKey+f -> Fullscreen window<br />
 WindowsKey+arrowkeys -> switch window<br />
 WindowsKey+leftmouseclicked -> replace window in layout<br />
 
