@@ -9,9 +9,9 @@ yay -S --needed --noconfirm sway-git foot-git dmenu
 yay -S --needed --noconfirm adwaita-dark
 yay -S --needed --noconfirm pcmanfm lxappearance gvfs ntfs-3g xarchiver rar zip unzip 
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.gtkrc-2.0 --output ~/.gtkrc-2.0
-yay -S --needed --noconfirm pipewire pipewire-alsa alsa-utils
+yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils pamixer
 yay -S --needed --noconfirm chromium
-#yay -S --needed --noconfirm noto-fonts-emoji
+yay -S --needed --noconfirm noto-fonts-emoji
 mkdir ~/.config/sway
 mkdir ~/.config/foot
 cp /etc/profile .
@@ -25,7 +25,7 @@ sudo cp profile /etc/
 rm -rf profile
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
-#curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/sway_bar.sh
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/sway_bar.sh
 echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")" >> ~/.config/sway/config
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.png --output ~/.config/sway/sway.png
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.bash_profile --output ~/.bash_profile
