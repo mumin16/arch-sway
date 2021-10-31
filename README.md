@@ -25,4 +25,5 @@ WindowsKey+1-2-3-n -> switch workspace<br />
 WindowsKey+shift+1-2-3-n -> send window to other workspace<br />
 
 WindowsKey+shift+c -> reload sway<br />
-WindowsKey+shift+e -> exit sway<br />
+WindowsKey+shift+e -> exit-logout sway<br />
+
