@@ -18,7 +18,7 @@ current_time=$(date "+%H:%M")
 #battery_status=$(upower --show-info $(upower --enumerate | grep 'BAT') | egrep "state" | awk '{print $2}')
 
 # Audio
-audio_volume=$(pamixer --sink `pactl list sinks short | grep RUNNING | awk '{print $1}'` --get-volume)
+audio_volume=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
 
 # Network
 #network=$(ip route get 1.1.1.1 | grep -Po '(?<=dev\s)\w+' | cut -f1 -d ' ')
@@ -59,4 +59,4 @@ audio_volume=$(pamixer --sink `pactl list sinks short | grep RUNNING | awk '{pri
 #fi
 
 #echo "🎧 $song_status $media_artist - $media_song | ⌨ $language | $network_active $interface_easyname ($ping ms) | 🏋 $loadavg_5min | $audio_active $audio_volume% | $battery_pluggedin $battery_charge | $date_and_week 🕘 $current_time"
-echo "⌨️$keyboard_input_name | 🔊$audio_volume% | 🕘$current_time"
+echo "⌨️$keyboard_input_name | 🔊$audio_volume | 🕘$current_time"
