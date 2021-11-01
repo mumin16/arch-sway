@@ -31,8 +31,8 @@ echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | 
 #curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.png --output ~/.config/sway/sway.png
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.bash_profile --output ~/.bash_profile
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
-sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/10-udisks2.rules --output /etc/polkit-1/rules.d/10-udisks2.rules
-sudo usermod -a -G storage "$USER" 
+#sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/10-udisks2.rules --output /etc/polkit-1/rules.d/10-udisks2.rules
+#sudo usermod -a -G storage "$USER" 
 yay -S --needed --noconfirm networkmanager
 sudo systemctl disable systemd-networkd
 sudo systemctl disable systemd-resolved
