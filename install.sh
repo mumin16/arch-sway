@@ -25,7 +25,8 @@ sudo cp profile /etc/
 rm -rf profile
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
-curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/sway_bar.sh
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway_bar.sh --output ~/.config/sway/sway_bar.sh
+sudo chmod 744 ~/.config/sway/sway_bar.sh
 echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")" >> ~/.config/sway/config
 #curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.png --output ~/.config/sway/sway.png
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.bash_profile --output ~/.bash_profile
