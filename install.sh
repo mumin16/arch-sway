@@ -6,10 +6,10 @@ cd ..
 rm -rf yay-bin
 yay -S --needed --noconfirm nano htop neofetch
 yay -S --needed --noconfirm sway-git foot-git dmenu
-#yay -S --needed --noconfirm adwaita-dark
+yay -S --needed --noconfirm adwaita-dark
 yay -S --needed --noconfirm pcmanfm lxappearance gvfs ntfs-3g xarchiver rar zip unzip 
 yay -S --needed --noconfirm acpi
-#curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.gtkrc-2.0 --output ~/.gtkrc-2.0
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.gtkrc-2.0 --output ~/.gtkrc-2.0
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
 yay -S --needed --noconfirm chromium
 yay -S --needed --noconfirm noto-fonts-emoji
