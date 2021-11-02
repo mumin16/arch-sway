@@ -22,6 +22,7 @@ echo "export XDG_SESSION_TYPE=wayland" >> profile
 echo "export WLR_NO_HARDWARE_CURSORS=1" >> profile
 echo "export WLR_RENDERER_ALLOW_SOFTWARE=1" >> profile
 echo "export _JAVA_AWT_WM_NONREPARENTING=1" >> profile
+echo "export QT_QPA_PLATFORM=wayland" >> profile
 sudo cp profile /etc/
 rm -rf profile
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
