@@ -42,4 +42,5 @@ sudo systemctl disable iwd
 sudo systemctl enable NetworkManager
 rm -rf install.sh
 yay -Sc --noconfirm
+#yay -S --needed --noconfirm qt5-wayland
 reboot
