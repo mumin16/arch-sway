@@ -41,5 +41,5 @@ sudo systemctl disable iwd
 sudo systemctl enable NetworkManager
 rm -rf install.sh
 yay -Sc --noconfirm
-#yay -S --needed --noconfirm obs-studio qt5-wayland
+#yay -S --needed --noconfirm obs-studio qt5-wayland mpv
 reboot
