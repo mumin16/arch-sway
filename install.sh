@@ -40,6 +40,12 @@ yay -S --needed --noconfirm chromium
 #yay -S --needed --noconfirm obs-studio qt5-wayland mpv
 #yay -S --needed --noconfirm visual-studio-code-bin gdb ninja cmake npm
 #yay -S --needed --noconfirm ufw nginx certbot-nginx
+: '
+sudo pacman -S --needed --noconfirm virtualbox
+sudo modprobe vboxdrv
+sudo usermod -aG vboxusers "$USER"
+sudo pacman -S --needed --noconfirm virtualbox-guest-iso
+'
 rm -rf install.sh
 yay -Sc --noconfirm
 reboot
