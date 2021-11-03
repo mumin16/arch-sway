@@ -4,6 +4,8 @@ iwlist scanning
 iwctl station wlan0 connect wifi_adi
 '
 DISK=sda
+HOST=linux
+USER=arch
 PASS=1
 
 wipefs -a -f /dev/"$DISK"
