@@ -30,6 +30,7 @@ w
 mkfs.fat -F32 /dev/"$DISK"1     
 mkfs.ext4 /dev/"$DISK"2
 
+:'
 #root u mount et ve temel sistem yüklemelerini yap
 mount /dev/"$DISK"2 /mnt
 pacstrap /mnt base linux linux-firmware
@@ -64,7 +65,7 @@ systmectl enable NetworkManager
 umount -R /mnt
 exit
 reboot
-
+'
 
 
 
