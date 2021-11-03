@@ -18,27 +18,27 @@ echo -e "y\n" | mount /dev/"$DISK"2 /mnt
 
 pacstrap /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
-timedatectl set-timezone "Europe/Istanbul"
-timedatectl set-ntp true
-locale-gen
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
-echo "KEYMAP=tr" > /etc/vconsole.conf
-echo "$HOST" > /etc/hostname
-mkinitcpio -P
-echo -e "$PASS\n$PASS\n" | passwd
 
-useradd -m "$USER" -p "$PASS"
-usermod -aG wheel "$USER"
-pacman -S --needed --noconfirm sudo
-echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+echo -e "timedatectl set-timezone "Europe/Istanbul"" | arch-chroot /mnt
+echo -e "timedatectl set-ntp true" | arch-chroot /mnt
+echo -e "locale-gen" | arch-chroot /mnt
+echo -e "echo "LANG=en_US.UTF-8" > /etc/locale.conf" | arch-chroot /mnt
+echo -e "echo "KEYMAP=tr" > /etc/vconsole.conf" | arch-chroot /mnt
+echo -e "echo "$HOST" > /etc/hostname" | arch-chroot /mnt
+echo -e "mkinitcpio -P" | arch-chroot /mnt
+echo -e "echo -e "$PASS\n$PASS\n" | passwd" | arch-chroot /mnt
 
-pacman -S --needed --noconfirm grub 
-grub-install --target=i386-pc /dev/"$DISK"
-grub-mkconfig -o /boot/grub/grub.cfg
+echo -e "useradd -m "$USER" -p "$PASS"" | arch-chroot /mnt
+echo -e "usermod -aG wheel "$USER"" | arch-chroot /mnt
+echo -e "pacman -S --needed --noconfirm sudo" | arch-chroot /mnt
+echo -e "echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers" | arch-chroot /mnt
 
-pacman -S --needed --noconfirm networkmanager
-systmectl enable NetworkManager
+echo -e "pacman -S --needed --noconfirm grub " | arch-chroot /mnt
+echo -e "grub-install --target=i386-pc /dev/"$DISK"" | arch-chroot /mnt
+echo -e "grub-mkconfig -o /boot/grub/grub.cfg" | arch-chroot /mnt
+
+echo -e "pacman -S --needed --noconfirm networkmanager" | arch-chroot /mnt
+echo -e "systmectl enable NetworkManager" | arch-chroot /mnt
 
 umount -R /mnt
 exit
