@@ -15,9 +15,8 @@ mkfs.vfat -F32 /dev/"$DISK"1
 mkfs.ext4 /dev/"$DISK"2
 
 echo -e "y\n" | mount /dev/"$DISK"2 /mnt
-:'
-pacstrap /mnt base linux linux-firmware
 
+pacstrap /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 timedatectl set-timezone "Europe/Istanbul"
@@ -25,12 +24,12 @@ timedatectl set-ntp true
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo "KEYMAP=tr" > /etc/vconsole.conf
-echo "linux" > /etc/hostname
+echo "$HOST" > /etc/hostname
 mkinitcpio -P
 echo -e "$PASS\n$PASS\n" | passwd
 
-useradd -m x64 -p "$PASS"
-usermod -aG wheel x64
+useradd -m "$USER" -p "$PASS"
+usermod -aG wheel "$USER"
 pacman -S --needed --noconfirm sudo
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
@@ -44,4 +43,3 @@ systmectl enable NetworkManager
 umount -R /mnt
 exit
 reboot
-'
