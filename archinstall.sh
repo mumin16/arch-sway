@@ -5,6 +5,7 @@ iwctl station wlan0 connect wifi_adi
 #wifi_şifresi girersiniz istediğinde
 '
 DISK=sda
+PASS=1
 # türkçe q klavye
 #loadkeys trq
 # sistem saatini güncelle
@@ -32,9 +33,11 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo "KEYMAP=tr" > /etc/vconsole.conf
 echo "linux" > /etc/hostname
 mkinitcpio -P
-passwd 1 #root şifre
+passwd #root şifre
+"$PASS"
+"$PASS"
 # kullanici ekle
-useradd -m x64 -p 1
+useradd -m x64 -p "$PASS"
 usermod -aG wheel x64
 pacman -S --needed --noconfirm sudo
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
