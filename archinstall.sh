@@ -16,6 +16,17 @@ PASS=1
 #d  #tüm bölümleri sil
 #n  #+512m ve kalan şekilde boot ve root 2 bölüm yarat
 #w
+
+parted /dev/"$DISK"
+fdisk /dev/"$DISK"
+n
+echo -ne '\n'
+echo -ne '+512m\n'
+n
+echo -ne '\n'
+echo -ne '\n'
+w
+
 mkfs.fat -F32 /dev/"$DISK"1     
 mkfs.ext4 /dev/"$DISK"2
 
