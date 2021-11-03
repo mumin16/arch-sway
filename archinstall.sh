@@ -7,7 +7,7 @@ DISK=sda
 PASS=1
 
 wipefs -a /dev/"$DISK"
-(echo n; echo p; echo 1; echo 2048; echo +512m; echo y; echo n; echo p; echo 2; echo... ; echo... ; echo w;) | fdisk /dev/"$DISK"
+(echo n; echo -ne '\n'; echo -ne '\n'; echo -ne '\n'; echo +512m; echo y; echo w;) | fdisk /dev/"$DISK"
 
 mkfs.fat -F32 /dev/"$DISK"1     
-mkfs.ext4 /dev/"$DISK"2
+#♣mkfs.ext4 /dev/"$DISK"2
