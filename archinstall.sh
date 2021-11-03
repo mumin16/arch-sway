@@ -12,7 +12,7 @@ echo -e "n\n\n\n\n+512m\ny\nn\n\n\n\n\nw\n" | fdisk /dev/"$DISK"
 mkfs.vfat -F32 /dev/"$DISK"1     
 mkfs.ext4 /dev/"$DISK"2
 
-mount /dev/"$DISK"2 /mnt
+echo -e "y\n" | mount /dev/"$DISK"2 /mnt
 :'
 pacstrap /mnt base linux linux-firmware
 
