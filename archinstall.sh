@@ -8,26 +8,16 @@ wifi_şifresi girersiniz istediğinde
 '
 DISK=sda
 PASS=1
-# türkçe q klavye
-#loadkeys trq
-# sistem saatini güncelle
-#timedatectl set-ntp true
-# diskli biçimle
-#fdisk -l
-#fdisk /dev/"$DISK"
-#d  #tüm bölümleri sil
-#n  #+512m ve kalan şekilde boot ve root 2 bölüm yarat
-#w
 
 wipefs -a /dev/"$DISK"
 fdisk /dev/"$DISK"
-n
-echo -ne '\n'
-echo -ne '+512m\n'
-n
-echo -ne '\n'
-echo -ne '\n'
-w
+echo "n"
+echo ""
+echo "+512m"
+echo "n"
+echo ""
+echo ""
+echo "w"
 
 mkfs.fat -F32 /dev/"$DISK"1     
 mkfs.ext4 /dev/"$DISK"2
