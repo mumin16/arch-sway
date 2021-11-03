@@ -13,6 +13,7 @@ mkfs.vfat -F32 /dev/"$DISK"1
 mkfs.ext4 /dev/"$DISK"2
 
 mount /dev/"$DISK"2 /mnt
+:'
 pacstrap /mnt base linux linux-firmware
 
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -41,3 +42,4 @@ systmectl enable NetworkManager
 umount -R /mnt
 exit
 reboot
+'
