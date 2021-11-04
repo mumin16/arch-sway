@@ -28,7 +28,6 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo "KEYMAP=tr" > /etc/vconsole.conf
 echo "linux" > /etc/hostname
 mkinitcpio -P
-arch-chroot /mnt
 passwd
 echo "$PASS"
 echo "$PASS" 
@@ -43,7 +42,7 @@ grub-install --target=i386-pc /dev/"$DISK"
 grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S --needed --noconfirm networkmanager
-systmectl enable NetworkManager
+systemctl enable NetworkManager
 
 umount -R /mnt
 #exit
