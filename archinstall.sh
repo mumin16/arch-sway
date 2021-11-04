@@ -24,16 +24,16 @@ arch-chroot /mnt
 timedatectl set-timezone "Europe/Istanbul"
 timedatectl set-ntp true
 locale-gen
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "LANG=tr_TR.UTF-8" > /etc/locale.conf
 echo "KEYMAP=tr" > /etc/vconsole.conf
-echo "linux" > /etc/hostname
-mkinitcpio -P
+echo ""$HOST"" > /etc/hostname
+echo -e "arch-chroot /mnt" | mkinitcpio -P
 passwd
 echo "$PASS"
 echo "$PASS" 
 
-useradd -m x64 -p "$PASS"
-usermod -aG wheel x64
+useradd -m "$USER" -p "$PASS"
+usermod -aG wheel "$USER"
 pacman -S --needed --noconfirm sudo
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
