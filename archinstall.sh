@@ -27,10 +27,10 @@ locale-gen
 echo "LANG=tr_TR.UTF-8" > /etc/locale.conf
 echo "KEYMAP=tr" > /etc/vconsole.conf
 echo ""$HOST"" > /etc/hostname
-echo -e "arch-chroot /mnt" | mkinitcpio -P
+echo -e "arch-chroot /mnt\n" | mkinitcpio -P
 passwd
-echo "$PASS"
-echo "$PASS" 
+echo "$PASS\n"
+echo "$PASS\n" 
 
 useradd -m "$USER" -p "$PASS"
 usermod -aG wheel "$USER"
