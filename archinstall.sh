@@ -28,6 +28,7 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo "KEYMAP=tr" > /etc/vconsole.conf
 echo "linux" > /etc/hostname
 mkinitcpio -P
+arch-chroot /mnt
 passwd
 echo "$PASS"
 echo "$PASS" 
