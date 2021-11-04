@@ -46,5 +46,5 @@ pacman -S --needed --noconfirm networkmanager
 systmectl enable NetworkManager
 
 umount -R /mnt
-exit
-reboot
+#exit
+#reboot
