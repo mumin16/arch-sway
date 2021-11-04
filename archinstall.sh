@@ -22,13 +22,13 @@ arch-chroot /mnt
 timedatectl set-timezone "Europe/Istanbul"
 timedatectl set-ntp true
 locale-gen
-echo "LANG=tr_TR.UTF-8" > /etc/locale.conf
-echo "KEYMAP=tr" > /etc/vconsole.conf
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "KEYMAP=trq" > /etc/vconsole.conf
 echo ""$HOST"" > /etc/hostname
-echo -e "arch-chroot /mnt\n" | mkinitcpio -P
+mkinitcpio -P
 passwd
-echo "$PASS\n"
-echo "$PASS\n" 
+echo ""$PASS"\n"
+echo ""$PASS"\n" 
 
 useradd -m "$USER" -p "$PASS"
 usermod -aG wheel "$USER"
