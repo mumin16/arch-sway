@@ -38,7 +38,7 @@ set $menu fuzzel
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg ~/.config/sway/sway.png fill
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
@@ -235,8 +235,8 @@ bar {
     font pango:DejaVu Sans Mono 10
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    #status_command while ~/.config/sway/sway_bar.sh; do sleep 1; done
-    status_command while date +'🕧%H:%M'; do sleep 1; done
+    status_command while ~/.config/sway/sway_bar.sh; do sleep 1; done
+    #status_command while date +'🕧%H:%M'; do sleep 1; done
     
     colors {
         statusline #ffffff
@@ -246,4 +246,4 @@ bar {
 }
 
 include /etc/sway/config.d/*
-input type:keyboard xkb_layout  tr
+
