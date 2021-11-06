@@ -90,6 +90,7 @@ resume 'swaymsg "output * dpms on"'
     #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
     #bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
+    bindsym print exec grim
 
     # Start a terminal
     bindsym $mod+t exec $term
