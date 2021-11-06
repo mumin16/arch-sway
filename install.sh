@@ -11,7 +11,7 @@ yay -S --needed --noconfirm gvfs ntfs-3g
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.gtkrc-2.0 --output ~/.gtkrc-2.0
 #sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/10-udisks2.rules --output /etc/polkit-1/rules.d/10-udisks2.rules
 #sudo usermod -a -G storage "$USER" 
-yay -S --needed --noconfirm acpi
+yay -S --needed --noconfirm acpi brightnessctl grim
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
 mkdir ~/.config/sway
 mkdir ~/.config/foot
