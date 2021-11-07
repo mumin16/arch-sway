@@ -12,6 +12,9 @@ default_border pixel 1
 # Thin borders:
 smart_borders on
 
+# Set wallpaper
+exec swaybg -i ~/.config/sway/sway.jpg
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -50,6 +53,9 @@ resume 'swaymsg "output * dpms on"'
     bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
+# Backlight
+    bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
+    bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
 
     # Start a terminal
     bindsym $mod+t exec $term
