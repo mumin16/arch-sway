@@ -31,7 +31,7 @@ curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway_bar.sh --output ~/.config/sway/sway_bar.sh
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config.yml --output ~/.config/yambar/config.yml
 echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")" >> ~/.config/sway/config
-#curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.png --output ~/.config/sway/sway.png
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.jpg --output ~/.config/sway/sway.jpg
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.bash_profile --output ~/.bash_profile
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
 yay -S --needed --noconfirm networkmanager
