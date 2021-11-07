@@ -6,6 +6,7 @@ cd ..
 rm -rf yay-bin
 yay -S --needed --noconfirm nano htop neofetch
 yay -S --needed --noconfirm sway-git foot-git fuzzel swayidle noto-fonts-emoji
+yay -S --needed --noconfirm yambar ttf-font-awesome
 yay -S --needed --noconfirm pcmanfm lxappearance xarchiver rar zip unzip adwaita-dark
 yay -S --needed --noconfirm gvfs ntfs-3g 
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.gtkrc-2.0 --output ~/.gtkrc-2.0
@@ -15,6 +16,7 @@ yay -S --needed --noconfirm acpi brightnessctl grim
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
 mkdir ~/.config/sway
 mkdir ~/.config/foot
+mkdir ~/.config/yambar
 cp /etc/profile .
 echo "export MOZ_ENABLE_WAYLAND=1" >> profile
 echo "export XDG_CURRENT_DESKTOP=sway" >> profile
@@ -27,7 +29,7 @@ rm -rf profile
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway_bar.sh --output ~/.config/sway/sway_bar.sh
-sudo chmod 744 ~/.config/sway/sway_bar.sh
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config.yml --output ~/.config/yambar/config.yml
 echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")" >> ~/.config/sway/config
 #curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.png --output ~/.config/sway/sway.png
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.bash_profile --output ~/.bash_profile
