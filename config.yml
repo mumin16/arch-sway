@@ -1,0 +1,99 @@
+# Typical laptop setup, with wifi, brightness, battery etc, for
+# i3/Sway.
+
+# For X11/i3, you'll want to replace calls to swaymsg with i3-msg, and
+# the sway-xkb module with the xkb module.
+
+# fonts we'll be re-using here and there
+awesome: &awesome Font Awesome 5 Free:style=solid:pixelsize=14
+awesome_brands: &awesome_brands Font Awesome 5 Brands:pixelsize=16
+
+std_underline: &std_underline {underline: { size: 2, color: ff0000ff}}
+
+
+# This is THE bar configuration
+bar:
+  height: 26
+  location: top
+  spacing: 5
+  margin: 7
+
+  # Default font
+  font: Adobe Helvetica:pixelsize=12
+
+  foreground: ffffffff
+  background: 111111cc
+
+  border:
+    width: 1
+    color: 999999cc
+    margin: 0
+    top-margin: 0
+
+  left:
+    - label:
+        content:
+          string:
+            on-click: fuzzel
+            text:  #{/bin/sh -c "awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master)""}
+            font: *awesome  
+
+    - i3:
+        anchors: # Not used (directly) by f00bar; used here to avoid duplication
+          - string: &i3_common {margin: 5, on-click: "swaymsg --quiet workspace {name}"}
+          - string: &default {<<: *i3_common, text: "{name}"}
+          - focused: &focused
+              deco: {stack: [background: {color: ffa0a04c}, <<: *std_underline]}
+          - invisible: &invisible {foreground: ffffff55}
+          - urgent: &urgent
+              foreground: 000000ff
+              deco: {stack: [background: {color: bc2b3fff}, <<: *std_underline]}
+          - map: &i3_mode
+              tag: mode
+              default:
+                - string:
+                    margin: 5
+                    text: "{mode}"
+                    deco: {background: {color: cc421dff}}
+                - empty: {right-margin: 7}
+              values:
+                default: {empty: {}}
+        content:
+          "":
+            map:
+              tag: state
+              values:
+                focused:   {string: {<<: [*default, *focused]}}
+                unfocused: {string: {<<: *default}}
+                invisible: {string: {<<: [*default, *invisible]}}
+                urgent:    {string: {<<: [*default, *urgent]}}
+
+  center:
+    - clock:
+        time-format: "%H:%M"
+        date-format: "%d/%m/%Y"
+        content:
+          - string: {text: , font: *awesome}
+          - string: {text: "{date}", right-margin: 5}
+          - string: {text: , font: *awesome}
+          - string: {text: "{time}"}
+          
+  right:
+    - label:
+        content:
+          string:
+            on-click: foot nmtui
+            text:  #"$(nmcli -t -f NAME c show --active)"
+            font: *awesome  
+    - label:
+        content:
+          string:
+            on-click: foot alsamixer
+            text:  #{/bin/sh -c "awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master)""}
+            font: *awesome                               
+    - label:
+        content:
+          string:
+            on-click: foot poweroff
+            text: 
+            font: *awesome
