@@ -7,7 +7,7 @@ rm -rf yay-bin
 yay -S --needed --noconfirm nano htop neofetch
 yay -S --needed --noconfirm sway-git foot-git fuzzel swayidle noto-fonts-emoji
 yay -S --needed --noconfirm yambar ttf-font-awesome
-yay -S --needed --noconfirm pcmanfm lxappearance xarchiver rar zip unzip adwaita-dark
+yay -S --needed --noconfirm pcmanfm lxappearance xarchiver rar zip unzip material-black-colors-theme
 yay -S --needed --noconfirm gvfs ntfs-3g 
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.gtkrc-2.0 --output ~/.gtkrc-2.0
 #sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/10-udisks2.rules --output /etc/polkit-1/rules.d/10-udisks2.rules
