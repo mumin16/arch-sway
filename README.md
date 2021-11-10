@@ -9,6 +9,9 @@ curl https://raw.githubusercontent.com/mumin16/arch-sway/main/install.sh --outpu
 bash install.sh
 
 Shortkeys:<br />
+
+=Super
+
 WindowsKey+t -> Terminal (foot)<br />
 WindowsKey+p -> Program Launcher (fuzzel)<br />
 WindowsKey+d -> Directory file manager (pcmanfm)<br />
