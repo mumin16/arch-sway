@@ -6,13 +6,11 @@ gaps outer 0
 # Hide titlebar on windows: 
 default_border pixel 1
 
-# Default Font
-#font pango:Noto Sans Regular 10
 
 # Thin borders:
 smart_borders on
 
-# Set wallpaper
+# Set wallpaper:
 exec swaybg -i ~/.config/sway/sway.jpg
 
 ### Variables
@@ -24,10 +22,15 @@ set $left h
 set $down j
 set $up k
 set $right l
+
 # terminal emulator
 set $term foot
+#alacritty
+#kitty
+
 #application launcher
-set $menu fuzzel
+set $menu dmenu_path | dmenu | xargs swaymsg exec --
+#fuzzel
 #rofi -show drun -theme material
 #dmenu_path | dmenu | xargs swaymsg exec --
 #wofi --show run
@@ -53,7 +56,9 @@ resume 'swaymsg "output * dpms on"'
     bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
+#
 # Backlight
+#
     bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
     bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
 
@@ -192,24 +197,23 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-exec yambar
 
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-#bar {
-#    position top
-#    separator_symbol "|" 
-#    font pango:DejaVu Sans Mono 10
-#    #status_command while ~/.config/sway/sway_bar.sh; do sleep 1; done
-#    status_command while date +'🕧%H:%M'; do sleep 1; done
-    
-#    colors {
-#        statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
-#}
+bar {
+   position top
+   separator_symbol "|" 
+   font Awesome 10
+   status_command while ~/.config/sway/swaybar.sh; do sleep 1; done
+ 
+   colors {
+       statusline #ffffff
+       background #323232
+       inactive_workspace #32323200 #32323200 #5c5c5c
+   }
+}
 
 #include /etc/sway/config.d/*
+
