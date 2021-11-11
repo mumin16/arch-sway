@@ -13,7 +13,7 @@ Shortkeys:<br />
 =Super
 
 WindowsKey+t -> Terminal (foot)<br />
-WindowsKey+p -> Program Launcher (fuzzel)<br />
+WindowsKey+p -> Program Launcher (dmenu)<br />
 WindowsKey+d -> Directory file manager (pcmanfm)<br />
 WindowsKey+c -> Chromium (web browser)<br />
 WindowsKey+m -> Mixer (sound/alsamixer)<br />
