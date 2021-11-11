@@ -53,7 +53,7 @@ cpu_usage() {
   separator $bg "#2E7D32"  
   echo -n ",{"
   echo -n "\"name\":\"id_cpu_usage\","
-  echo -n "\"full_text\":\"  $(~/.config/sway/cpu.py)% \","
+  echo -n "\"full_text\":\"  $(awk '/^Mem/ {print $3}' <(free -m))M \","
   echo -n "\"background\":\"#3949AB\","
   common
   echo -n "},"
