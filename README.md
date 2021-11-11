@@ -10,8 +10,6 @@ bash install.sh
 
 Shortkeys:<br />
 
-=Super
-
 WindowsKey+t -> Terminal (foot)<br />
 WindowsKey+p -> Program Launcher (dmenu)<br />
 WindowsKey+d -> Directory file manager (pcmanfm)<br />
