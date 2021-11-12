@@ -110,7 +110,6 @@ volume() {
   echo -n "},"
   separator $bg_bar_color $bg
 }
-
 logout() {
   echo -n ",{"
   echo -n "\"name\":\"id_logout\","
