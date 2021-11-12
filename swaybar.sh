@@ -97,13 +97,13 @@ battery0() {
 volume() {
   local bg="#673AB7"
   separator $bg $bg_separator_previous  
-  vol=$(pamixer --get-volume)
+  vol=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
   echo -n ",{"
   echo -n "\"name\":\"id_volume\","
   if [ $vol -le 0 ]; then
-    echo -n "\"full_text\":\"  ${vol}% \","
+    echo -n "\"full_text\":\"  ${vol} \","
   else
-    echo -n "\"full_text\":\"  ${vol}% \","
+    echo -n "\"full_text\":\"  ${vol} \","
   fi
   echo -n "\"background\":\"$bg\","
   common
