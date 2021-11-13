@@ -34,6 +34,7 @@ echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | 
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.jpg --output ~/.config/sway/sway.jpg
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.bash_profile --output ~/.bash_profile
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/chromium-flags.conf --output ~/.config/chromium-flags.conf
 yay -S --needed --noconfirm networkmanager
 sudo systemctl disable systemd-networkd
 sudo systemctl disable systemd-resolved
