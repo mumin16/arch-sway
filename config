@@ -29,7 +29,7 @@ set $term foot
 #kitty
 
 #application launcher
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu rofi -show drun
 #fuzzel
 #rofi -show drun -theme material
 #dmenu_path | dmenu | xargs swaymsg exec --
