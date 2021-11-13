@@ -123,6 +123,19 @@ volume() {
 logout() {
   echo -n ",{"
   echo -n "\"name\":\"id_logout\","
+  echo -n "\"full_text\":\"  \""
+  echo -n "}"
+}
+reboot() {
+  echo -n ",{"
+  echo -n "\"name\":\"id_reboot\","
+  echo -n "\"full_text\":\"  \""
+  echo -n "}"
+
+}
+power() {
+  echo -n ",{"
+  echo -n "\"name\":\"id_power\","
   echo -n "\"full_text\":\"  \""
   echo -n "}"
 }
@@ -143,6 +156,8 @@ do
   battery0
   volume
   logout
+  reboot
+  power
   echo "]"
 	sleep 10
 done) &
@@ -171,9 +186,17 @@ do
   elif [[ $line == *"name"*"id_volume"* ]]; then
     foot -e alsamixer &
 
-  # LOGOUT
+  # POWEROFF
+  elif [[ $line == *"name"*"id_power"* ]]; then
+    swaynag -t warning -m 'Poweroff PC?' -b 'yes' 'foot poweroff' > /dev/null &
+
+  # REBOOT
+  elif [[ $line == *"name"*"id_reboot"* ]]; then
+    swaynag -t warning -m 'Restart PC?' -b 'yes' 'foot reboot' > /dev/null &
+
+  # REBOOT
   elif [[ $line == *"name"*"id_logout"* ]]; then
-    swaynag -t warning -m 'Power off?' -b 'yes' 'foot poweroff' > /dev/null &
+    swaynag -t warning -m $(whoami) -b 'Logout' 'swaymsg exit' > /dev/null &
 
   fi  
 done
