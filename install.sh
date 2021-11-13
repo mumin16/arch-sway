@@ -51,4 +51,4 @@ sudo pacman -S --needed --noconfirm virtualbox-guest-iso
 '
 rm -rf install.sh
 yay -Sc --noconfirm
-reboot
+#reboot
