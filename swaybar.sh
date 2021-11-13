@@ -5,7 +5,7 @@
 #   status_command exec ~/.config/sway/swaybar.sh
 # }
 
-bg_bar_color="#282A36"
+bg_bar_color="#323232"
 
 # Print a left caret separator
 # @params {string} $1 text color, ex: "#FF0000"
@@ -35,10 +35,20 @@ common() {
   echo -n "\"border_right\":0"
 }
 
+shortcuts() {
+  local bg="#881199" # vert
+  separator $bg $bg_bar_color
+  echo -n ",{"
+  echo -n "\"name\":\"id_shortcuts\","
+  echo -n "\"full_text\":\"  $(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://") \","
+  echo -n "\"background\":\"$bg\","
+  common
+  echo -n "},"
+}
 
 conn() {
   local bg="#2E7D32" # vert
-  separator $bg $bg_bar_color
+  separator $bg "#881199"
   echo -n ",{"
   echo -n "\"name\":\"id_conn\","
   echo -n "\"full_text\":\"  $(nmcli -t -f NAME c show --active) \","
@@ -48,11 +58,11 @@ conn() {
 }
 
 
-cpu_usage() {
+mem_usage() {
   local bg="#3949AB"
   separator $bg "#2E7D32"  
   echo -n ",{"
-  echo -n "\"name\":\"id_cpu_usage\","
+  echo -n "\"name\":\"id_mem_usage\","
   echo -n "\"full_text\":\"  $(awk '/^Mem/ {print $3}' <(free -m))M \","
   echo -n "\"background\":\"#3949AB\","
   common
@@ -126,8 +136,9 @@ echo '[]'                   # We send an empty first array of blocks to make the
 (while :;
 do
 	echo -n ",["
+  shortcuts
   conn
-  cpu_usage
+  mem_usage
   mydate
   battery0
   volume
@@ -139,12 +150,17 @@ done) &
 # click events
 while read line;
 do
+
   # CHECK CONNECTION
-  if [[ $line == *"name"*"id_conn"* ]]; then
+  if [[ $line == *"name"*"id_shortcuts"* ]]; then
+    foot -e ~/.config/sway/shortcuts.sh &
+
+  # CHECK CONNECTION
+  elif [[ $line == *"name"*"id_conn"* ]]; then
     foot -e nmtui &
 
   # CPU
-  elif [[ $line == *"name"*"id_cpu_usage"* ]]; then
+  elif [[ $line == *"name"*"id_mem_usage"* ]]; then
     foot -e htop &
 
   # TIME
