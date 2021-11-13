@@ -5,7 +5,7 @@ makepkg -si --noconfirm
 cd ..
 rm -rf yay-bin
 yay -S --needed --noconfirm nano htop neofetch
-yay -S --needed --noconfirm sway-git foot-git dmenu swayidle ttf-font-awesome
+yay -S --needed --noconfirm sway-git foot-git rofi swayidle ttf-font-awesome
 yay -S --needed --noconfirm pcmanfm lxappearance xarchiver rar zip unzip material-black-colors-theme
 yay -S --needed --noconfirm gvfs ntfs-3g 
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.gtkrc-2.0 --output ~/.gtkrc-2.0
