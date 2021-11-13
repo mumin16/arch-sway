@@ -26,6 +26,8 @@ curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output 
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/swaybar.sh --output ~/.config/sway/swaybar.sh
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/click_time.sh --output ~/.config/sway/click_time.sh
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/shortcuts.sh --output ~/.config/sway/shortcuts.sh
+sudo chmod 777 ~/.config/sway/shortcuts.sh
 sudo chmod 777 ~/.config/sway/click_time.sh
 sudo chmod 777 ~/.config/sway/swaybar.sh
 echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")" >> ~/.config/sway/config
