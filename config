@@ -45,10 +45,11 @@ resume 'swaymsg "output * dpms on"'
 #
 # Basics:
 #
+
+    bindsym $mod+c exec chromium
     bindsym $mod+d exec pcmanfm
-    bindsym $mod+c exec chromium 
-    bindsym $mod+m exec $term alsamixer
-    bindsym $mod+n exec $term nmtui
+    bindsym $mod+p exec $menu
+    bindsym $mod+t exec $term
 
     bindsym print exec grim
 
@@ -63,13 +64,11 @@ resume 'swaymsg "output * dpms on"'
     bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
 
     # Start a terminal
-    bindsym $mod+t exec $term
+    #bindsym $mod+t exec $term
 
     # Kill focused window
     bindsym $mod+q kill
 
-    # Start your launcher
-    bindsym $mod+p exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
