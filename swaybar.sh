@@ -35,20 +35,23 @@ common() {
   echo -n "\"border_right\":0"
 }
 
+
+
 shortcuts() {
-  local bg="#881199" # vert
+  local bg="#639bd3" # vert
   separator $bg $bg_bar_color
   echo -n ",{"
   echo -n "\"name\":\"id_shortcuts\","
-  echo -n "\"full_text\":\"  $(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://") \","
+  echo -n "\"full_text\":\"  $(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")\","
   echo -n "\"background\":\"$bg\","
   common
   echo -n "},"
 }
 
+
 conn() {
   local bg="#2E7D32" # vert
-  separator $bg "#881199"
+  separator $bg "#639bd3"
   echo -n ",{"
   echo -n "\"name\":\"id_conn\","
   echo -n "\"full_text\":\"  $(nmcli -t -f NAME c show --active) \","
@@ -120,22 +123,10 @@ volume() {
   echo -n "},"
   separator $bg_bar_color $bg
 }
+
 logout() {
   echo -n ",{"
   echo -n "\"name\":\"id_logout\","
-  echo -n "\"full_text\":\"  \""
-  echo -n "}"
-}
-reboot() {
-  echo -n ",{"
-  echo -n "\"name\":\"id_reboot\","
-  echo -n "\"full_text\":\"  \""
-  echo -n "}"
-
-}
-power() {
-  echo -n ",{"
-  echo -n "\"name\":\"id_power\","
   echo -n "\"full_text\":\"  \""
   echo -n "}"
 }
@@ -156,8 +147,6 @@ do
   battery0
   volume
   logout
-  reboot
-  power
   echo "]"
 	sleep 10
 done) &
@@ -166,15 +155,15 @@ done) &
 while read line;
 do
 
-  # CHECK CONNECTION
+  # TERMINAL
   if [[ $line == *"name"*"id_shortcuts"* ]]; then
     foot -e ~/.config/sway/shortcuts.sh &
-
-  # CHECK CONNECTION
+    
+  # CONNECTION
   elif [[ $line == *"name"*"id_conn"* ]]; then
     foot -e nmtui &
 
-  # CPU
+  # MEMORY
   elif [[ $line == *"name"*"id_mem_usage"* ]]; then
     foot -e htop &
 
@@ -186,17 +175,9 @@ do
   elif [[ $line == *"name"*"id_volume"* ]]; then
     foot -e alsamixer &
 
-  # POWEROFF
-  elif [[ $line == *"name"*"id_power"* ]]; then
-    swaynag -t warning -m 'Poweroff PC?' -b 'yes' 'foot poweroff' > /dev/null &
-
-  # REBOOT
-  elif [[ $line == *"name"*"id_reboot"* ]]; then
-    swaynag -t warning -m 'Restart PC?' -b 'yes' 'foot reboot' > /dev/null &
-
-  # REBOOT
+  # LOGOUT
   elif [[ $line == *"name"*"id_logout"* ]]; then
-    swaynag -t warning -m $(whoami) -b 'Logout' 'swaymsg exit' > /dev/null &
+    swaynag -t warning -m $(whoami) -b 'PowerOff' 'foot poweroff' -b 'Restart' 'foot reboot' -b 'Logout' 'swaymsg exit'> /dev/null &
 
   fi  
 done
