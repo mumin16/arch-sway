@@ -35,13 +35,7 @@ curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.jpg --output 
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/.bash_profile --output ~/.bash_profile
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/chromium-flags.conf --output ~/.config/chromium-flags.conf
-: '
-yay -S --needed --noconfirm networkmanager
-sudo systemctl disable systemd-networkd
-sudo systemctl disable systemd-resolved
-sudo systemctl disable iwd
-sudo systemctl enable NetworkManager
-'
+
 yay -S --needed --noconfirm chromium
 #yay -S --needed --noconfirm libreoffice-dev-bin
 #yay -S --needed --noconfirm obs-studio qt5-wayland mpv
