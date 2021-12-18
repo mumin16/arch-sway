@@ -35,6 +35,8 @@ set $menu rofi -show drun
 #dmenu_path | dmenu | xargs swaymsg exec --
 #wofi --show run
 
+#exec lxqt-policykit-agent
+
 ### Idle configuration
 exec swayidle \
 timeout 600 'swaymsg "output * dpms off"' \
@@ -63,8 +65,6 @@ resume 'swaymsg "output * dpms on"'
     bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
     bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
 
-    # Start a terminal
-    #bindsym $mod+t exec $term
 
     # Kill focused window
     bindsym $mod+q kill
