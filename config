@@ -36,7 +36,7 @@ set $menu rofi -show drun
 #wofi --show run
 
 #exec lxqt-policykit-agent
-#exec polkit-kde-authentication-agent-1
+#exec /usr/lib/polkit-kde-authentication-agent-1
 
 ### Idle configuration
 exec swayidle \
