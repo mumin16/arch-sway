@@ -10,19 +10,19 @@ yay -S --needed --noconfirm qt5-wayland pcmanfm-qt qt5ct lxqt-archiver rar zip u
 yay -S --needed --noconfirm gvfs ntfs-3g 
 yay -S --needed --noconfirm acpi brightnessctl grim
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
-sudo mkdir ~/.config/sway
-sudo mkdir ~/.config/foot
-sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
-sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
-sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/swaybar.sh --output ~/.config/sway/swaybar.sh
-sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/click_time.sh --output ~/.config/sway/click_time.sh
-sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/shortcuts.sh --output ~/.config/sway/shortcuts.sh
+mkdir ~/.config/sway
+mkdir ~/.config/foot
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/swaybar.sh --output ~/.config/sway/swaybar.sh
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/click_time.sh --output ~/.config/sway/click_time.sh
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/shortcuts.sh --output ~/.config/sway/shortcuts.sh
+echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")" >> ~/.config/sway/config
 sudo chmod 777 ~/.config/sway/shortcuts.sh
 sudo chmod 777 ~/.config/sway/click_time.sh
 sudo chmod 777 ~/.config/sway/swaybar.sh
-echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")" >> ~/.config/sway/config
-sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.jpg --output ~/.config/sway/sway.jpg
-sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.jpg --output ~/.config/sway/sway.jpg
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
 yay -S --needed --noconfirm sddm
 sudo systemctl enable sddm
 
