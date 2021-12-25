@@ -12,17 +12,6 @@ yay -S --needed --noconfirm acpi brightnessctl grim
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
 sudo mkdir ~/.config/sway
 sudo mkdir ~/.config/foot
-sudo cp /etc/profile .
-sudo echo "export MOZ_ENABLE_WAYLAND=1" >> profile
-sudo echo "export XDG_CURRENT_DESKTOP=sway" >> profile
-sudo echo "export XDG_SESSION_TYPE=wayland" >> profile
-sudo echo "export WLR_NO_HARDWARE_CURSORS=1" >> profile
-sudo echo "export WLR_RENDERER_ALLOW_SOFTWARE=1" >> profile
-sudo echo "export _JAVA_AWT_WM_NONREPARENTING=1" >> profile
-sudo echo "export QT_QPA_PLATFORMTHEME="qt5ct"" >> profile
-sudo echo "export QT_QPA_PLATFORM=wayland" >> profile
-sudo cp profile /etc/
-rm -rf profile
 sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
 sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
 sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/swaybar.sh --output ~/.config/sway/swaybar.sh
@@ -36,6 +25,18 @@ sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.jpg --ou
 sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
 yay -S --needed --noconfirm sddm
 sudo systemctl enable sddm
+
+sudo cp /etc/profile .
+sudo echo "export MOZ_ENABLE_WAYLAND=1" >> profile
+sudo echo "export XDG_CURRENT_DESKTOP=sway" >> profile
+sudo echo "export XDG_SESSION_TYPE=wayland" >> profile
+sudo echo "export WLR_NO_HARDWARE_CURSORS=1" >> profile
+sudo echo "export WLR_RENDERER_ALLOW_SOFTWARE=1" >> profile
+sudo echo "export _JAVA_AWT_WM_NONREPARENTING=1" >> profile
+sudo echo "export QT_QPA_PLATFORMTHEME="qt5ct"" >> profile
+sudo echo "export QT_QPA_PLATFORM=wayland" >> profile
+sudo cp profile /etc/
+rm -rf profile
 
 yay -S --needed --noconfirm chromium
 #yay -S --needed --noconfirm libreoffice
