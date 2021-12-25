@@ -177,7 +177,7 @@ do
 
   # LOGOUT
   elif [[ $line == *"name"*"id_logout"* ]]; then
-    swaynag -t warning -m $(whoami) -b 'PowerOff' 'foot poweroff' -b 'Restart' 'foot reboot' -b 'Logout' 'swaymsg exit'> /dev/null &
+    swaymsg exit &
 
   fi  
 done
