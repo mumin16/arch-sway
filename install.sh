@@ -13,12 +13,15 @@ yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
 mkdir ~/.config/sway
 mkdir ~/.config/foot
 mkdir ~/.config/qt5ct
+mkdir ~/.config/pcmanfm-qt
+mkdir ~/.config/pcmanfm-qt/default
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/swaybar.sh --output ~/.config/sway/swaybar.sh
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/click_time.sh --output ~/.config/sway/click_time.sh
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/shortcuts.sh --output ~/.config/sway/shortcuts.sh
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/qt5ct.conf --output ~/.config/qt5ct/qt5ct.conf
+curl https://raw.githubusercontent.com/mumin16/arch-sway/main/settings.conf --output ~/.config/pcmanfm-qt/default/settings.conf
 echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")" >> ~/.config/sway/config
 sudo chmod 777 ~/.config/sway/shortcuts.sh
 sudo chmod 777 ~/.config/sway/click_time.sh
