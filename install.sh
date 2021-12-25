@@ -12,6 +12,7 @@ yay -S --needed --noconfirm acpi brightnessctl grim
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
 mkdir ~/.config/sway
 mkdir ~/.config/foot
+mkdir ~/.config/qt5ct
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/swaybar.sh --output ~/.config/sway/swaybar.sh
