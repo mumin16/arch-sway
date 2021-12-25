@@ -50,7 +50,7 @@ resume 'swaymsg "output * dpms on"'
 #
 
     bindsym $mod+c exec chromium
-    bindsym $mod+d exec pcmanfm
+    bindsym $mod+d exec pcmanfm-qt
     bindsym $mod+p exec $menu
     bindsym $mod+t exec $term
 
