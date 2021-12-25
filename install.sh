@@ -4,9 +4,9 @@ cd yay-bin
 makepkg -si --noconfirm
 cd ..
 rm -rf yay-bin
-yay -S --needed --noconfirm nano htop neofetch
+yay -S --needed --noconfirm nano htop neofetch mpv leafpad
 yay -S --needed --noconfirm sway-git foot-git rofi swayidle ttf-font-awesome
-yay -S --needed --noconfirm mpv qt5-wayland pcmanfm-qt leafpad qt5ct lxqt-archiver rar zip unzip
+yay -S --needed --noconfirm qt5-wayland pcmanfm-qt qt5ct lxqt-archiver rar zip unzip
 yay -S --needed --noconfirm gvfs ntfs-3g 
 yay -S --needed --noconfirm acpi brightnessctl grim
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
