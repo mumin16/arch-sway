@@ -23,17 +23,17 @@ echo "export QT_QPA_PLATFORMTHEME="qt5ct"" >> profile
 echo "export QT_QPA_PLATFORM=wayland" >> profile
 sudo cp profile /etc/
 rm -rf profile
-curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
-curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
-curl https://raw.githubusercontent.com/mumin16/arch-sway/main/swaybar.sh --output ~/.config/sway/swaybar.sh
-curl https://raw.githubusercontent.com/mumin16/arch-sway/main/click_time.sh --output ~/.config/sway/click_time.sh
-curl https://raw.githubusercontent.com/mumin16/arch-sway/main/shortcuts.sh --output ~/.config/sway/shortcuts.sh
+sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
+sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
+sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/swaybar.sh --output ~/.config/sway/swaybar.sh
+sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/click_time.sh --output ~/.config/sway/click_time.sh
+sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/shortcuts.sh --output ~/.config/sway/shortcuts.sh
 sudo chmod 777 ~/.config/sway/shortcuts.sh
 sudo chmod 777 ~/.config/sway/click_time.sh
 sudo chmod 777 ~/.config/sway/swaybar.sh
 echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")" >> ~/.config/sway/config
-curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.jpg --output ~/.config/sway/sway.jpg
-curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
+sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.jpg --output ~/.config/sway/sway.jpg
+sudo curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
 yay -S --needed --noconfirm sddm
 sudo systemctl enable sddm
 
