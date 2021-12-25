@@ -10,9 +10,9 @@ yay -S --needed --noconfirm qt5-wayland pcmanfm-qt qt5ct lxqt-archiver rar zip u
 yay -S --needed --noconfirm gvfs ntfs-3g 
 yay -S --needed --noconfirm acpi brightnessctl grim
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
-mkdir ~/.config/sway
-mkdir ~/.config/foot
-cp /etc/profile .
+sudo mkdir ~/.config/sway
+sudo mkdir ~/.config/foot
+sudo cp /etc/profile .
 echo "export MOZ_ENABLE_WAYLAND=1" >> profile
 echo "export XDG_CURRENT_DESKTOP=sway" >> profile
 echo "export XDG_SESSION_TYPE=wayland" >> profile
