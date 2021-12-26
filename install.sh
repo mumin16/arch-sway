@@ -4,7 +4,7 @@ cd yay-bin
 makepkg -si --noconfirm
 cd ..
 rm -rf yay-bin
-yay -S --needed --noconfirm nano htop neofetch mpv leafpad
+yay -S --needed --noconfirm nano htop neofetch mpv featherpad
 yay -S --needed --noconfirm sway-git foot-git rofi swayidle ttf-font-awesome
 yay -S --needed --noconfirm qt5-wayland pcmanfm-qt qt5ct lxqt-policykit lxqt-archiver rar zip unzip
 yay -S --needed --noconfirm gvfs ntfs-3g 
