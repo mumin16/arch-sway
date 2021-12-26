@@ -39,7 +39,7 @@ echo "export WLR_NO_HARDWARE_CURSORS=1" >> profile
 echo "export WLR_RENDERER_ALLOW_SOFTWARE=1" >> profile
 echo "export _JAVA_AWT_WM_NONREPARENTING=1" >> profile
 echo "export QT_QPA_PLATFORMTHEME="qt5ct"" >> profile
-echo "export QT_QPA_PLATFORM=wayland" >> profile
+#echo "export QT_QPA_PLATFORM=wayland" >> profile
 sudo cp profile /etc/
 rm -rf profile
 
