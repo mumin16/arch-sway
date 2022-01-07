@@ -44,7 +44,7 @@ sudo cp profile /etc/
 rm -rf profile
 
 yay -S --needed --noconfirm chromium
-#yay -S --needed --noconfirm libreoffice
+#yay -S --needed --noconfirm onlyoffice
 #yay -S --needed --noconfirm obs-studio  
 #yay -S --needed --noconfirm visual-studio-code-bin gdb ninja cmake npm
 #yay -S --needed --noconfirm ufw nginx certbot-nginx
