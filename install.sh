@@ -28,8 +28,8 @@ sudo chmod 777 ~/.config/sway/click_time.sh
 sudo chmod 777 ~/.config/sway/swaybar.sh
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.jpg --output ~/.config/sway/sway.jpg
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
-yay -S --needed --noconfirm sddm
-sudo systemctl enable sddm
+#yay -S --needed --noconfirm sddm
+#sudo systemctl enable sddm
 
 cp /etc/profile .
 echo "export MOZ_ENABLE_WAYLAND=1" >> profile
