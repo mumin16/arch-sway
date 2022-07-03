@@ -177,7 +177,7 @@ do
 
   # LOGOUT
   elif [[ $line == *"name"*"id_logout"* ]]; then
-    swaymsg exit &
+    foot -e poweroff &
 
   fi  
 done
