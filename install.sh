@@ -9,8 +9,8 @@ yay -S --needed --noconfirm sway swayidle swaybg rofi ttf-font-awesome qt5-wayla
 #yay -S --needed --noconfirm pcmanfm-qt lxqt-policykit lxqt-archiver  qterminal featherpad
 yay -S --needed --noconfirm dolphin kate ark konsole polkit-kde-agent
 yay -S --needed --noconfirm rar zip unzip gvfs ntfs-3g 
-yay -S --needed --noconfirm acpi brightnessctl grim
-yay -S --needed --noconfirm pipewire alsa-utils
+yay -S --needed --noconfirm acpi brightnessctl grim alsa-utils
+#yay -S --needed --noconfirm pipewire
 mkdir ~/.config/sway
 mkdir ~/.config/qt5ct
 #mkdir ~/.config/pcmanfm-qt
