@@ -7,7 +7,7 @@ rm -rf yay-bin
 yay -S --needed --noconfirm nano htop neofetch mpv
 yay -S --needed --noconfirm sway swayidle swaybg rofi ttf-font-awesome qt5-wayland qt6-wayland xorg-xwayland qt5ct breeze-icons 
 #yay -S --needed --noconfirm pcmanfm-qt lxqt-policykit lxqt-archiver  qterminal featherpad
-yay -S --needed --noconfirm dolphin kate ark konsole polkit-kde-agent plasma-wayland-session
+yay -S --needed --noconfirm dolphin kate ark konsole polkit-kde-agent
 yay -S --needed --noconfirm rar zip unzip gvfs ntfs-3g 
 yay -S --needed --noconfirm acpi brightnessctl grim
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
@@ -33,7 +33,7 @@ sudo systemctl enable sddm
 cp /etc/profile .
 echo "export MOZ_ENABLE_WAYLAND=1" >> profile
 echo "export XDG_CURRENT_DESKTOP=sway" >> profile
-echo "export XDG_SESSION_TYPE=wayland dbus-run-session startplasma-wayland" >> profile
+echo "export XDG_SESSION_TYPE=wayland" >> profile
 echo "export WLR_NO_HARDWARE_CURSORS=1" >> profile
 echo "export WLR_RENDERER_ALLOW_SOFTWARE=1" >> profile
 echo "export _JAVA_AWT_WM_NONREPARENTING=1" >> profile
