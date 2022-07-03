@@ -5,7 +5,7 @@ makepkg -si --noconfirm
 cd ..
 rm -rf yay-bin
 yay -S --needed --noconfirm nano htop neofetch mpv
-yay -S --needed --noconfirm sway foot rofi swayidle ttf-font-awesome qt5-wayland qt6-wayland xorg-xwayland qt5ct breeze-icons 
+yay -S --needed --noconfirm sway foot rofi swayidle swaybg ttf-font-awesome qt5-wayland qt6-wayland xorg-xwayland qt5ct breeze-icons 
 #yay -S --needed --noconfirm pcmanfm-qt lxqt-policykit lxqt-archiver  featherpad
 yay -S --needed --noconfirm dolphin kate ark polkit-kde-agent
 yay -S --needed --noconfirm rar zip unzip gvfs ntfs-3g 
