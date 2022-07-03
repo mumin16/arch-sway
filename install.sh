@@ -6,8 +6,8 @@ cd ..
 rm -rf yay-bin
 yay -S --needed --noconfirm nano htop neofetch mpv
 yay -S --needed --noconfirm sway swayidle swaybg rofi ttf-font-awesome qt5-wayland qt6-wayland xorg-xwayland qt5ct breeze-icons 
-#yay -S --needed --noconfirm pcmanfm-qt lxqt-policykit lxqt-archiver  featherpad
-yay -S --needed --noconfirm dolphin kate ark polkit-kde-agent
+#yay -S --needed --noconfirm pcmanfm-qt lxqt-policykit lxqt-archiver  qterminal featherpad
+yay -S --needed --noconfirm dolphin kate ark konsole polkit-kde-agent
 yay -S --needed --noconfirm rar zip unzip gvfs ntfs-3g 
 yay -S --needed --noconfirm acpi brightnessctl grim
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
