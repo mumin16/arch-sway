@@ -157,23 +157,23 @@ do
 
   # TERMINAL
   if [[ $line == *"name"*"id_shortcuts"* ]]; then
-    konsole -e ~/.config/sway/shortcuts.sh &
+    qterminal -e ~/.config/sway/shortcuts.sh &
     
   # CONNECTION
   elif [[ $line == *"name"*"id_conn"* ]]; then
-    konsole -e nmtui &
+    qterminal -e nmtui &
 
   # MEMORY
   elif [[ $line == *"name"*"id_mem_usage"* ]]; then
-    konsole -e htop &
+    qterminal -e htop &
 
   # TIME
   elif [[ $line == *"name"*"id_time"* ]]; then
-    konsole -e ~/.config/sway/click_time.sh &
+    qterminal -e ~/.config/sway/click_time.sh &
 
   # VOLUME
   elif [[ $line == *"name"*"id_volume"* ]]; then
-    konsole -e alsamixer &
+    qterminal -e pavucontrol-qt &
 
   # LOGOUT
   elif [[ $line == *"name"*"id_logout"* ]]; then
