@@ -10,7 +10,7 @@ yay -S --needed --noconfirm pcmanfm-qt lxqt-policykit lxqt-archiver  qterminal p
 #yay -S --needed --noconfirm dolphin kate ark konsole polkit-kde-agent
 yay -S --needed --noconfirm rar zip unzip gvfs ntfs-3g 
 yay -S --needed --noconfirm acpi brightnessctl grim alsa-utils
-#yay -S --needed --noconfirm pipewire 
+#yay -S --needed --noconfirm pipewire pipewire-media-session
 mkdir ~/.config/sway
 mkdir ~/.config/qt5ct
 mkdir ~/.config/pcmanfm-qt
