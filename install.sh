@@ -5,18 +5,16 @@ makepkg -si --noconfirm
 cd ..
 rm -rf yay-bin
 yay -S --needed --noconfirm nano htop neofetch mpv
-yay -S --needed --noconfirm sway foot rofi swayidle swaybg ttf-font-awesome qt5-wayland qt6-wayland xorg-xwayland qt5ct breeze-icons 
+yay -S --needed --noconfirm sway swayidle swaybg rofi ttf-font-awesome qt5-wayland qt6-wayland xorg-xwayland qt5ct breeze-icons 
 #yay -S --needed --noconfirm pcmanfm-qt lxqt-policykit lxqt-archiver  featherpad
 yay -S --needed --noconfirm dolphin kate ark polkit-kde-agent
 yay -S --needed --noconfirm rar zip unzip gvfs ntfs-3g 
 yay -S --needed --noconfirm acpi brightnessctl grim
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
 mkdir ~/.config/sway
-mkdir ~/.config/foot
 mkdir ~/.config/qt5ct
 #mkdir ~/.config/pcmanfm-qt
 #mkdir ~/.config/pcmanfm-qt/default
-curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/swaybar.sh --output ~/.config/sway/swaybar.sh
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/click_time.sh --output ~/.config/sway/click_time.sh
@@ -29,8 +27,8 @@ sudo chmod 777 ~/.config/sway/click_time.sh
 sudo chmod 777 ~/.config/sway/swaybar.sh
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/sway.jpg --output ~/.config/sway/sway.jpg
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/electron-flags.conf --output ~/.config/electron-flags.conf
-#yay -S --needed --noconfirm sddm
-#sudo systemctl enable sddm
+yay -S --needed --noconfirm sddm
+sudo systemctl enable sddm
 
 cp /etc/profile .
 echo "export MOZ_ENABLE_WAYLAND=1" >> profile
