@@ -4,24 +4,24 @@ cd yay-bin
 makepkg -si --noconfirm
 cd ..
 rm -rf yay-bin
-yay -S --needed --noconfirm nano htop neofetch mpv featherpad
-yay -S --needed --noconfirm sway foot rofi swayidlet ttf-font-awesome #qt5-wayland qt6-wayland xorg-xwayland oxygen-icons pcmanfm-qt qt5ct lxqt-policykit lxqt-archiver
-yay -S --needed --noconfirm ark dolphin rar zip unzip
+yay -S --needed --noconfirm nano htop neofetch mpv #featherpad
+yay -S --needed --noconfirm sway foot rofi swayidle ttf-font-awesome qt5-wayland qt6-wayland xorg-xwayland qt5ct #oxygen-icons pcmanfm-qt lxqt-policykit lxqt-archiver
+yay -S --needed --noconfirm kate ark dolphin rar zip unzip
 yay -S --needed --noconfirm gvfs ntfs-3g 
 yay -S --needed --noconfirm acpi brightnessctl grim
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
 mkdir ~/.config/sway
 mkdir ~/.config/foot
-mkdir ~/.config/qt5ct
-mkdir ~/.config/pcmanfm-qt
-mkdir ~/.config/pcmanfm-qt/default
+#mkdir ~/.config/qt5ct
+#mkdir ~/.config/pcmanfm-qt
+#mkdir ~/.config/pcmanfm-qt/default
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/foot.ini --output ~/.config/foot/foot.ini
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/config --output ~/.config/sway/config
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/swaybar.sh --output ~/.config/sway/swaybar.sh
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/click_time.sh --output ~/.config/sway/click_time.sh
 curl https://raw.githubusercontent.com/mumin16/arch-sway/main/shortcuts.sh --output ~/.config/sway/shortcuts.sh
-curl https://raw.githubusercontent.com/mumin16/arch-sway/main/qt5ct.conf --output ~/.config/qt5ct/qt5ct.conf
-curl https://raw.githubusercontent.com/mumin16/arch-sway/main/settings.conf --output ~/.config/pcmanfm-qt/default/settings.conf
+#curl https://raw.githubusercontent.com/mumin16/arch-sway/main/qt5ct.conf --output ~/.config/qt5ct/qt5ct.conf
+#curl https://raw.githubusercontent.com/mumin16/arch-sway/main/settings.conf --output ~/.config/pcmanfm-qt/default/settings.conf
 echo "input type:keyboard xkb_layout" "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")" >> ~/.config/sway/config
 sudo chmod 777 ~/.config/sway/shortcuts.sh
 sudo chmod 777 ~/.config/sway/click_time.sh
