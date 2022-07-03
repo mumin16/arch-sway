@@ -157,27 +157,27 @@ do
 
   # TERMINAL
   if [[ $line == *"name"*"id_shortcuts"* ]]; then
-    foot -e ~/.config/sway/shortcuts.sh &
+    konsole -e ~/.config/sway/shortcuts.sh &
     
   # CONNECTION
   elif [[ $line == *"name"*"id_conn"* ]]; then
-    foot -e nmtui &
+    konsole -e nmtui &
 
   # MEMORY
   elif [[ $line == *"name"*"id_mem_usage"* ]]; then
-    foot -e htop &
+    konsole -e htop &
 
   # TIME
   elif [[ $line == *"name"*"id_time"* ]]; then
-    foot -e ~/.config/sway/click_time.sh &
+    konsole -e ~/.config/sway/click_time.sh &
 
   # VOLUME
   elif [[ $line == *"name"*"id_volume"* ]]; then
-    foot -e alsamixer &
+    konsole -e alsamixer &
 
   # LOGOUT
   elif [[ $line == *"name"*"id_logout"* ]]; then
-    foot -e poweroff &
+    swaymsg exit &
 
   fi  
 done
