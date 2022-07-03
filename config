@@ -24,7 +24,7 @@ set $up k
 set $right l
 
 # terminal emulator
-set $term foot
+set $term konsole
 #alacritty
 #kitty
 
