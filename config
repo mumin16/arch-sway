@@ -24,7 +24,7 @@ set $up k
 set $right l
 
 # terminal emulator
-set $term konsole
+set $term qterminal
 #alacritty
 #kitty
 
@@ -50,7 +50,7 @@ resume 'swaymsg "output * dpms on"'
 #
 
     bindsym $mod+c exec chromium
-    bindsym $mod+d exec dolphin 
+    bindsym $mod+d exec pcmanfm-qt 
     #pcmanfm-qt
     bindsym $mod+p exec $menu
     bindsym $mod+t exec $term
