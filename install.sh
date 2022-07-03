@@ -5,7 +5,7 @@ makepkg -si --noconfirm
 cd ..
 rm -rf yay-bin
 yay -S --needed --noconfirm nano htop neofetch mpv featherpad
-yay -S --needed --noconfirm sway foot rofi swayidle ttf-font-awesome qt5-wayland qt6-wayland xorg-xwayland qt5ct oxygen-icons pcmanfm-qt lxqt-policykit lxqt-archiver
+yay -S --needed --noconfirm sway foot rofi swayidle ttf-font-awesome qt5-wayland qt6-wayland xorg-xwayland qt5ct adwaita-icon-theme pcmanfm-qt lxqt-policykit lxqt-archiver
 yay -S --needed --noconfirm rar zip unzip gvfs ntfs-3g 
 yay -S --needed --noconfirm acpi brightnessctl grim
 yay -S --needed --noconfirm pulseaudio pulseaudio-alsa alsa-utils
